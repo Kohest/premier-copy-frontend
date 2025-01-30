@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #ececec;
+  background-color: #0f0f10;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: white;
+  text-decoration: inherit;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:disabled {
+  opacity: 0.5;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+.main-container {
+  padding-left: 3.25rem !important;
+  padding-right: 3.25rem !important;
+}
+.slick-prev,
+.slick-next {
+  display: none !important;
+}
+.thumbnail-shadow-left:before {
+  background-color: linear-gradient(
+    89.73deg,
+    #0f0f10 0.29%,
+    rgba(15, 15, 16, 0.992) 12.07%,
+    rgba(15, 15, 16, 0.969) 22.55%,
+    rgba(15, 15, 16, 0.932) 31.85%,
+    rgba(15, 15, 16, 0.883) 40.12%,
+    rgba(15, 15, 16, 0.824) 47.49%,
+    rgba(15, 15, 16, 0.756) 54.07%,
+    rgba(15, 15, 16, 0.68) 60.01%,
+    rgba(15, 15, 16, 0.599) 65.43%,
+    rgba(15, 15, 16, 0.513) 70.46%,
+    rgba(15, 15, 16, 0.425) 75.23%,
+    rgba(15, 15, 16, 0.336) 79.88%,
+    rgba(15, 15, 16, 0.247) 84.54%,
+    rgba(15, 15, 16, 0.161) 89.32%,
+    rgba(15, 15, 16, 0.078) 94.38%,
+    rgba(15, 15, 16, 0) 99.82%
+  );
+}
+.thumbnail-shadow-bottom::after {
+  background-color: linear-gradient(
+    1.35deg,
+    #0f0f10 0.57%,
+    rgba(15, 15, 16, 0.997) 4.47%,
+    rgba(15, 15, 16, 0.986) 8.27%,
+    rgba(15, 15, 16, 0.969) 12.05%,
+    rgba(15, 15, 16, 0.943) 15.88%,
+    rgba(15, 15, 16, 0.909) 19.85%,
+    rgba(15, 15, 16, 0.866) 24.01%,
+    rgba(15, 15, 16, 0.814) 28.44%,
+    rgba(15, 15, 16, 0.752) 33.23%,
+    rgba(15, 15, 16, 0.68) 38.43%,
+    rgba(15, 15, 16, 0.596) 44.13%,
+    rgba(15, 15, 16, 0.502) 50.4%,
+    rgba(15, 15, 16, 0.395) 57.31%,
+    rgba(15, 15, 16, 0.276) 64.94%,
+    rgba(15, 15, 16, 0.145) 73.36%,
+    rgba(15, 15, 16, 0) 82.65%
+  );
+}
+.slick-track {
+  margin-left: 0 !important;
+}
