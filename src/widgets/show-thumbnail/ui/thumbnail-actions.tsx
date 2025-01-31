@@ -3,6 +3,7 @@ import SendReview from "../../../features/send-review/send-review";
 import SetFavorite from "../../../features/set-favorite/set-favorite";
 import WatchContentButton from "../../../features/watch-content-button/watch-content-button";
 import WatchTrailerButton from "../../../features/watch-trailer-button/watch-trailer-button";
+import { Season } from "../../../entities/content/types";
 interface Props {
   showTitle: string;
   showSubtitle?: string;

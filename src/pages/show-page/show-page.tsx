@@ -17,8 +17,10 @@ import SliderSmItemSkeleton from "../../shared/ui/skeletons/slider-sm-item-skele
 
 const ShowPage = () => {
   const params = useParams();
-  const { setShowType, showType } = usePlayerStore();
-  const { contentItem, error, loading } = useGetContentById(params.id!);
+  const { setShowType, showType, setSeasons } = usePlayerStore();
+  const { contentItem, error, loading, fetchContentItem } = useGetContentById(
+    params.id!
+  );
   const [activeSeason, setActiveSeason] = useState<Season | null>(null);
   const { userData } = useProfileStore();
   const { loading: sliderLoading, sliderItems } = useGetSmSliderItems({
@@ -26,9 +28,15 @@ const ShowPage = () => {
   });
 
   useEffect(() => {
+    if (params.id) {
+      fetchContentItem(params.id);
+    }
+  }, [params.id]);
+  useEffect(() => {
     if (contentItem) {
       setActiveSeason(contentItem?.Series?.seasons[0] || null);
       setShowType(contentItem.Series ? "series" : contentItem.Movie && "movie");
+      contentItem.Series && setSeasons(contentItem.Series.seasons);
     }
   }, [contentItem, setShowType]);
   if ((error && !loading) || (!loading && !contentItem)) {

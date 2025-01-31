@@ -29,6 +29,7 @@ const WatchContentButton: FC<Props> = ({
     setSubtitle,
     setShowType,
     showType,
+    setSeasons,
     setActiveVideo,
     setQualityOptions,
     setQuality,
@@ -44,6 +45,7 @@ const WatchContentButton: FC<Props> = ({
           showType === "movie"
             ? await Api.movie.getMovieQualities(movieId!)
             : await Api.series.getEpisodeQualities(episodeId!);
+
         setQualityOptions(qualities);
         setQuality(qualities[0].qualityName);
         setActiveVideo(showType === "movie" ? movieId! : episodeId!);

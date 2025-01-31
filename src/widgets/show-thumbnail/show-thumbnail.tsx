@@ -4,7 +4,7 @@ import ThumbnailImage from "./ui/thubmnail-image";
 import ThumbnailActions from "./ui/thumbnail-actions";
 import ThumbnailShowGenres from "./ui/thumbnail-show-genres";
 import ThumbnailShowScore from "./ui/thumbnail-show-score";
-import { Genre } from "../../entities/content/types";
+import { Genre, Season } from "../../entities/content/types";
 interface Props {
   showTitle: string;
   showLogo?: string;
@@ -28,6 +28,7 @@ const ShowThumbnail: FC<Props> = ({
   showImage,
   ageRating,
   showDescription,
+
   showLogo,
   showSubtitle,
   contentId,
